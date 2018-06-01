@@ -1,0 +1,12 @@
+%h1
+  - if @github_query.language.nil?
+    We don't know which language
+    = @github_query.username
+    likes the most, because he doesn't have any repos :(
+  - else
+
+    I think that
+    = @github_query.username
+    likes
+    = @github_query.language
+    the most!

@@ -1,0 +1,10 @@
+- flash.each do |name, msg|
+  .alert= msg
+
+%h1 Check user!
+
+= form_for(@github_query) do |f|
+  = f.label :username, 'Username', class: %w(col-sm-2 form-control-label)
+  = f.text_field :username, class: %w(form-control)
+
+  = f.submit 'Check!', class: %w(btn btn-primary)
